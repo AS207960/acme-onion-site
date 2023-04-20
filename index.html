@@ -86,6 +86,12 @@
         The <code>onion-csr-01</code> challenge, and <code>http-01</code> and <code>tls-alpn-01</code> challenges against
         hidden services requiring authentication will require additional work to implement in clients.
     </p>
+    <h4>Certbot <code>onion-csr-01</code> plugin</h4>
+    <p>
+        We have written a plugin for Certbot that implements the <code>onion-csr-01</code> challenge.
+        The plugin is available <a href="https://pypi.org/project/certbot-onion/">on PyPi</a>. It can be used as follows:
+    </p>
+    <pre><code>certbot certonly --server https://acme.api.acmeforonions.org/directory --authenticator onion-csr --onion-csr-hs-dir /var/lib/tor/example_hs/ -d 5anebu2glyc235wbbop3m2ukzlaptpkq333vdtdvcjpigyb7x2i2m2qd.onion</code></pre>
     <h3>CAA</h3>
     <p>
         The CA will check CAA records for the domain being issued a certificate. Our identifying domain name for CAA is
