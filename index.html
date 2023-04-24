@@ -97,6 +97,13 @@
         The CA will check CAA records for the domain being issued a certificate. Our identifying domain name for CAA is
         <code>test.acmeforonions.org</code>.
     </p>
+    <p>
+        A fork of Tor implementing the CAA extensions to the hidden service descriptor is available
+        <a href="https://github.com/AS207960/tor">on GitHub</a>. A hidden service with CAA records in its descriptor
+        is available at <a href="http://znkiu4wogurrktkqqid2efdg4nvztm7d2jydqenrzeclfgv3byevnbid.onion/">znkiu4wogurrktkqqid2efdg4nvztm7d2jydqenrzeclfgv3byevnbid.onion</a>;
+        this can be used to test client implementations that shouldn't care about CAA ignore it correctly, and to test
+        CAA validators against.
+    </p>
     <h3>Certificate Transparency</h3>
     <p>
         All certificates issued are logged to <a href="https://certificate.transparency.dev">Certificate Transparency</a>
